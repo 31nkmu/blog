@@ -18,4 +18,5 @@ class CommentDetailView(generics.RetrieveDestroyAPIView):
 
     def get_permissions(self):
         if self.request.method == 'DELETE':
-            return [IsAuthorOrAdminOrPostOwner()]
+            return IsAuthorOrAdminOrPostOwner(),
+        return permissions.AllowAny(),

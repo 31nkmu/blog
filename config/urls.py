@@ -35,7 +35,8 @@ urlpatterns = [
     path('docs/', schema_view.with_ui("swagger")),
     path('api/account/', include('apps.account.urls')),
     path('api/category/', include('apps.category.urls')),
-    path('api/posts/', include('apps.post.urls'))
+    path('api/posts/', include('apps.post.urls')),
+    path('api/comments/', include('apps.comment.urls')),
 ]
 
 urlpatterns += static(
