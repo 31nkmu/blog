@@ -1,6 +1,7 @@
 from rest_framework import generics, permissions
 from . import serializers
 from .models import Comment
+from ..post.permissions import IsAuthorOrAdminOrPostOwner
 
 
 class CommentCreateView(generics.CreateAPIView):
